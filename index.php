@@ -8,12 +8,23 @@ class Movie {
 
   public function __construct(string $_name, array $_genre, int $_length) {
     $this->name = $_name;
-    $this->genre = $_genre;
     $this->length = $_length;
   }
 
+  public function getGenre() {
+    $this->genre = $_genre;
+    if ($_genre == 2) {
+      return "Animazione";
+    } elseif ($_genre == 3) {
+      return "Divertente";
+    }
+  }
 
 }
+
+$testMovie1 = new Movie('Il mio amico Totoro', [2, 3], 133);
+
+var_dump($testMovie1);
 
 ?>
 

@@ -16,7 +16,6 @@ body {
 }
 
 img {
-  width: 70%;
   aspect-ratio: 9/16;
   object-fit: cover;
 }

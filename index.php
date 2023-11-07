@@ -73,9 +73,11 @@ $printableGenre = [];
                <strong><?php echo $production->name ?></strong>
               </h4>
 
-              <p class="card-text">
-                <strong>Genere/i:</strong> <?php echo implode(", ", $production->genreName) ?>
-              </p>
+              <div class="badges-wrapper d-flex flex-wrap justify-content-center">
+                <?php foreach ($production->genreName as $genre): ?>
+                <span class="badge badge-ctm bg-secondary"> <?= $genre ?> </span></h6>
+                <?php endforeach; ?>
+              </div>
 
               <p class="card-text">
                 <strong>Anno Pubblicazione:</strong> <?php echo $production->published_year ?>
@@ -118,9 +120,11 @@ $printableGenre = [];
                 <strong><?php echo $production->name ?></strong>
               </h4>
 
-              <p class="card-text">
-                <strong>Genere/i:</strong> <?php echo implode(", ", $production->genreName) ?>
-              </p>
+              <div class="badges-wrapper d-flex flex-wrap justify-content-center">
+                <?php foreach ($production->genreName as $genre): ?>
+                <span class="badge badge-ctm bg-secondary"> <?= $genre ?> </span></h6>
+                <?php endforeach; ?>
+              </div>
 
               <p class="card-text">
                 <strong>Da/A:</strong> <?php echo $production->aired_from_year ?>/<?php echo $production->aired_to_year ?>

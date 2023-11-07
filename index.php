@@ -14,44 +14,11 @@
   
 // }
 
+require_once __DIR__ . '/Model/Movie.php';
+require_once __DIR__ . '/db/db.php';
+
 $printableGenre = [];
 
-class Movie {
-  public $name;
-  public $genreID;
-  public $length;
-  public $image;
-  public $genreName;
-
-  public function __construct(string $_name, array $_genreID, int $_length, string $_image) {
-    $this->name = $_name;
-    $this->setGenre($_genreID);
-    $this->length = $_length;
-    $this->image = $_image;
-  }
-
-
-  public function setGenre($_genreID) {
-    $this->genreID = $_genreID;
-    foreach($_genreID as $key => $value){
-      if ($value == 1) {
-        $this->genreName[] = "Fantascienza";
-      } elseif ($value == 2) {
-        $this->genreName[] = "Animazione";
-      } elseif ($value == 3) {
-        $this->genreName[] = "Divertimento";
-      }
-    }
-  }
-
-
-}
-
-
-
-$testMovie1 = new Movie('Il mio amico Totoro', [2, 3], 133, 'mio-vicino-totoro.jpg');
-var_dump($testMovie1);
-$testMovie2 = new Movie('Matrix', [1], 198, 'matrix.jpg');
 
 
 ?>
@@ -72,46 +39,34 @@ $testMovie2 = new Movie('Matrix', [1], 198, 'matrix.jpg');
 </head>
 <body>
   
-  <div id="app" class="container">
-    <div class="row">
+  <div id="app" class="container border rounded-2 my-3">
+    <h2>MOVIES</h2>
+    <div class="row justify-content-center">
 
-      <!-- MOVIE 1 -->
-      <div  class="col">
+      <!-- MOVIES -->
+      <?php foreach ($movies as $movie): ?>
+
+      <div class="col col-ctm" style="flex: 0 0 0%">
 
         <div class="card" style="width: 18rem;">
 
-          <img src="img/<?php echo $testMovie1->image ?>" class="card-img-top" alt="<?php echo $testMovie1->name ?>">
+          <img src="img/<?php echo $movie->image ?>" class="card-img-top" alt="<?php echo $movie->name ?>">
 
           <div class="card-body">
-            <h5 class="card-title"><?php echo $testMovie1->name ?></h5>
-            <p class="card-text">Genere/i: <?php echo implode(", ", $testMovie1->genreName) ?></p>
-            <p class="card-text">Durata: <?php echo $testMovie1->length ?> min</p>
+            <h5 class="card-title"><?php echo $movie->name ?></h5>
+            <p class="card-text">Genere/i: <?php echo implode(", ", $movie->genreName) ?></p>
+            <p class="card-text">Durata: <?php echo $movie->length ?> min</p>
 
           </div>
 
         </div>  
 
       </div>
-      <!-- /MOVIE 1 -->
+
+      <?php endforeach; ?>
+      <!-- /MOVIES -->
 
 
-      <!-- MOVIE 2 -->
-      <div  class="col">
-
-        <div class="card" style="width: 18rem;">
-
-        <img src="img/<?php echo $testMovie2->image ?>" class="card-img-top" alt="<?php echo $testMovie2->name ?>">
-
-          <div class="card-body">
-            <h5 class="card-title"><?php echo $testMovie2->name ?></h5>
-            <p class="card-text">Genere/i: <?php echo implode(", ", $testMovie2->genreName) ?></p>
-            <p class="card-text">Durata: <?php echo $testMovie2->length ?> min</p>
-          </div>
-
-        </div>  
-
-      </div>
-      <!-- /MOVIE 2 -->
 
 
     </div>

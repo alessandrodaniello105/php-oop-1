@@ -1,0 +1,64 @@
+:root {
+  --bg-primary: #334076;
+  --bg-secondary: #236D73;
+  --bg-special: #CD6057;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--bg-primary);
+}
+
+img {
+  width: 70%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+}
+
+
+.container {
+  background-color: var(--bg-special);
+}
+
+.container .text-box {
+  width: 100%;
+}
+
+.container .text-box .section-title {
+  margin: 15px auto;
+  /* width: 20%;
+  position: relative;
+  border-top: 1px solid black; */
+}
+
+/*
+.container .text-box .section-title::before {
+  content: "";
+  display: inline-block;
+  height: 50px;
+  width: 45%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  
+}
+
+.container .text-box .section-title::after {
+  content: "";
+  display: inline-block;
+  height: 50px;
+  width: 45%;
+  border: 1px solid black;
+}
+
+*/
+
+.card {
+  background-color: var(--bg-secondary);
+  color: rgba(235, 235, 235, 0.953);
+}

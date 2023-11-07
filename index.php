@@ -68,10 +68,22 @@ $printableGenre = [];
             <img src="img/<?php echo $production->image ?>" class="card-img-top" alt="<?php echo $production->name ?>">
 
             <div class="card-body">
-              <h4 class="card-title"><?php echo $production->name ?></h4>
-              <p class="card-text"><strong>Genere/i:</strong> <?php echo implode(", ", $production->genreName) ?></p>
-              <p class="card-text"><strong>Anno Pubblicazione:</strong> <?php echo $production->published_year ?></p>
-              <p class="card-text"><strong>Durata:</strong> <?php echo $production->running_time ?> min</p>
+
+              <h4 class="card-title">
+               <strong><?php echo $production->name ?></strong>
+              </h4>
+
+              <p class="card-text">
+                <strong>Genere/i:</strong> <?php echo implode(", ", $production->genreName) ?>
+              </p>
+
+              <p class="card-text">
+                <strong>Anno Pubblicazione:</strong> <?php echo $production->published_year ?>
+              </p>
+
+              <p class="card-text">
+                <strong>Durata:</strong> <?php echo $production->running_time ?> min
+              </p>
 
             </div>
 
@@ -101,11 +113,26 @@ $printableGenre = [];
             <img src="img/<?php echo $production->image ?>" class="card-img-top" alt="<?php echo $production->name ?>">
 
             <div class="card-body">
-              <h4 class="card-title"><?php echo $production->name ?></h4>
-              <p class="card-text">Genere/i: <?php echo implode(", ", $production->genreName) ?></p>
-              <p class="card-text">Da/A: <?php echo $production->aired_from_year ?>/<?php echo $production->aired_to_year ?></p>
-              <p class="card-text">Episodi: <?php echo $production->number_of_episodes ?></p>
-              <p class="card-text">Stagioni: <?php echo $production->number_of_seasons ?></p>
+
+              <h4 class="card-title">
+                <strong><?php echo $production->name ?></strong>
+              </h4>
+
+              <p class="card-text">
+                <strong>Genere/i:</strong> <?php echo implode(", ", $production->genreName) ?>
+              </p>
+
+              <p class="card-text">
+                <strong>Da/A:</strong> <?php echo $production->aired_from_year ?>/<?php echo $production->aired_to_year ?>
+              </p>
+
+              <p class="card-text">
+                <strong>Episodi:</strong> <?php echo $production->number_of_episodes ?>
+              </p>
+
+              <p class="card-text">
+                <strong>Stagioni:</strong> <?php echo $production->number_of_seasons ?>
+              </p>
 
             </div>
 

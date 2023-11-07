@@ -14,6 +14,7 @@
   
 // }
 
+require_once __DIR__ . '/Model/Production.php';
 require_once __DIR__ . '/Model/Movie.php';
 require_once __DIR__ . '/db/db.php';
 
@@ -55,7 +56,8 @@ $printableGenre = [];
           <div class="card-body">
             <h5 class="card-title"><?php echo $movie->name ?></h5>
             <p class="card-text">Genere/i: <?php echo implode(", ", $movie->genreName) ?></p>
-            <p class="card-text">Durata: <?php echo $movie->length ?> min</p>
+            <p class="card-text">Anno Pubblicazione: <?php echo $movie->published_year ?></p>
+            <p class="card-text">Durata: <?php echo $movie->running_time ?> min</p>
 
           </div>
 

@@ -69,3 +69,38 @@ img {
 .badges-wrapper .badge-ctm {
   margin-right: 6px;
 }
+
+
+/************* BADGES GENRE/COLOR *************/
+.drammatico {
+  background-color: bisque !important;
+  color: var(--bg-primary);
+}
+
+.horror {
+  background-color: rgb(92, 0, 0) !important;
+}
+
+.fantastico {
+  background-color: rgba(0, 8, 156, 0.6) !important;
+}
+
+.commedia {
+  background-color: rgba(156, 122, 0, 1) !important;
+}
+
+.sentimentale {
+  background-color: rgba(156, 0, 0, 0.896) !important;
+}
+
+.fantascienza {
+  background-color: rgba(0, 10, 209, 0.6) !important;
+}
+
+.divertimento {
+  background-color: rgba(0, 209, 45, 0.6) !important;
+}
+
+.animazione {
+  background-color: rgba(0, 209, 192, 0.6) !important;
+}

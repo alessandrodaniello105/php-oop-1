@@ -75,7 +75,7 @@ $printableGenre = [];
 
               <div class="badges-wrapper d-flex flex-wrap justify-content-center">
                 <?php foreach ($production->genreName as $genre): ?>
-                <span class="badge badge-ctm bg-secondary"> <?= $genre ?> </span></h6>
+                <span class="badge badge-ctm bg-secondary <?= strtolower($genre) ?>"> <?= $genre ?> </span></h6>
                 <?php endforeach; ?>
               </div>
 
@@ -122,7 +122,7 @@ $printableGenre = [];
 
               <div class="badges-wrapper d-flex flex-wrap justify-content-center">
                 <?php foreach ($production->genreName as $genre): ?>
-                <span class="badge badge-ctm bg-secondary"> <?= $genre ?> </span></h6>
+                <span class="badge badge-ctm bg-secondary <?= strtolower($genre) ?>"> <?= $genre ?> </span></h6>
                 <?php endforeach; ?>
               </div>
 

@@ -8,13 +8,20 @@ class Production {
 
   public function __construct(string $_name, array $_genreID, string $_image) {
     $this->name = $_name;
-    $this->setGenre($_genreID);
+
+    if(empty($_genreID)){
+      $this->genreID = $_genreID;
+      $this->setGenre($_genreID);
+    } else {
+      // GESTIONE ERRORE
+      throw new Exception("Controlla gli ID genere nel database");
+    }
+
     $this->image = $_image;
   }
 
 
   public function setGenre($_genreID) {
-    $this->genreID = $_genreID;
     foreach($_genreID as $value){
       if ($value == 1) {
         $this->genreName[] = "Fantascienza";

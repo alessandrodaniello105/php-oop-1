@@ -9,7 +9,7 @@ class Production {
   public function __construct(string $_name, array $_genreID, string $_image) {
     $this->name = $_name;
 
-    if(empty($_genreID)){
+    if(!empty($_genreID)){
       $this->genreID = $_genreID;
       $this->setGenre($_genreID);
     } else {

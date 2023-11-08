@@ -15,6 +15,7 @@
 // }
 
 try {
+  require_once __DIR__ . '/Traits/Rating.php';
   require_once __DIR__ . '/Model/Production.php';
   require_once __DIR__ . '/Model/Movie.php';
   require_once __DIR__ . '/Model/TvSerie.php';
@@ -87,7 +88,7 @@ try {
           <!-- MOVIES -->
           <div class="tab-pane fade show active" id="movies-tab-pane" role="tabpanel" aria-labelledby="movies-tab" tabindex="0">
 
-            <div class="row">
+            <div class="row justify-content-evenly">
               <?php foreach ($productions as $production): ?>
               <?php if (get_class($production) == 'Movie'): ?>
 
@@ -120,6 +121,21 @@ try {
                       <strong>Durata:</strong> <?php echo $production->running_time ?> min
                     </p>
 
+                    <div class="rating-wrapper">
+
+                    <p class="card-text">
+                      Voto Critica: <?php echo $production->criticsRating ?>
+                    </p>
+
+                    <p class="card-text">
+                      Voto Utenti: <?php echo $production->usersRating ?>
+                    </p>
+
+                    <p class="card-text">
+                      Voto Medio: <?php echo $production->getAverageRating() ?>
+                    </p>
+
+                    </div>
                   </div>
 
                 </div> 
@@ -137,7 +153,7 @@ try {
           <!-- TV SERIES -->
           <div class="tab-pane fade" id="tvseries-tab-pane" role="tabpanel" aria-labelledby="tvseries-tab" tabindex="0">
 
-            <div class="row">
+            <div class="row justify-content-evenly">
               <?php foreach ($productions as $production): ?>
               <?php if (get_class($production) == 'TvSerie'): ?>
 

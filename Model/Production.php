@@ -1,12 +1,13 @@
 <?php
 
 class Production {
+  use Rating;
   public $name;
   public $genreID;
   public $image;
   public $genreName;
 
-  public function __construct(string $_name, array $_genreID, string $_image) {
+  public function __construct(string $_name, array $_genreID, string $_image, float $_criticsRating = null, float $_usersRating = null) {
     $this->name = $_name;
 
     if(!empty($_genreID)){
@@ -14,10 +15,13 @@ class Production {
       $this->setGenre($_genreID);
     } else {
       // GESTIONE ERRORE
-      throw new Exception("Controlla gli ID genere nel database");
+      throw new Exception("Controlla gli ID genere nel database: $this->name");
     }
 
     $this->image = $_image;
+
+    $this->criticsRating = $_criticsRating;
+    $this->usersRating = $_usersRating;
   }
 
 

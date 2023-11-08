@@ -3,7 +3,13 @@ const {createApp} = Vue;
 createApp({
   data() {
     return {
-      title: 'test'
+      title: 'alfonso',
+      activeTab: 'TvSerie'
+    }
+  },
+  methods: {
+    getAlert(name) {
+      alert(name);
     }
   }
 }).mount('#app')

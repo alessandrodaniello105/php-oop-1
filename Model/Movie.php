@@ -5,7 +5,7 @@ class Movie extends Production {
   public $published_year;
   public $running_time;
 
-  public function __construct(string $_name, array $_genreID, string $_image, $_published_year, int $_running_time, float $_criticsRating = null, float $_usersRating = null) {
+  public function __construct(string $_name, array $_genreID, string $_image, $_published_year, int $_running_time, float $_criticsRating = 0, float $_usersRating = 0) {
     
     if(is_numeric($_published_year)) {
       $this->published_year = $_published_year;

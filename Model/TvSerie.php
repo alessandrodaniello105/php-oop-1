@@ -14,14 +14,19 @@ class TvSerie extends Production {
     int $_aired_from_year, 
     int $_aired_to_year, 
     int $_number_of_episodes, 
-    int $_number_of_seasons) {
+    int $_number_of_seasons,
+    float $_criticsRating = 0,
+    float $_usersRating = 0) {
       $this->aired_from_year = $_aired_from_year;
       $this->aired_to_year = $_aired_to_year;
       $this->number_of_episodes = $_number_of_episodes;
       $this->number_of_seasons = $_number_of_seasons;
 
-      parent::__construct($_name, $_genreID, $_image);
-  }
+      $this->criticsRating = $_criticsRating;
+      $this->usersRating = $_usersRating;
+
+      parent::__construct($_name, $_genreID, $_image, $_criticsRating, $_usersRating);
+    }
 
   public function setGenre($_genreID) {
     $this->genreID = $_genreID;

@@ -124,18 +124,19 @@ try {
                     <div class="rating-wrapper">
 
                     <p class="card-text">
-                      Voto Critica: <?php echo $production->criticsRating ?>
+                      <strong>Voto Critica:</strong> <?php echo $production->criticsRating ?> / 5
                     </p>
 
                     <p class="card-text">
-                      Voto Utenti: <?php echo $production->usersRating ?>
+                      <strong>Voto Utenti:</strong> <?php echo $production->usersRating ?> / 5
                     </p>
 
                     <p class="card-text">
-                      Voto Medio: <?php echo $production->getAverageRating() ?>
+                      <strong>Voto Medio:</strong> <?php echo $production->getAverageRating() ?> / 5
                     </p>
 
                     </div>
+
                   </div>
 
                 </div> 
@@ -187,6 +188,22 @@ try {
                     <p class="card-text">
                       <strong>Stagioni:</strong> <?php echo $production->number_of_seasons ?>
                     </p>
+
+                    <div class="rating-wrapper">
+
+                      <p class="card-text">
+                        <strong>Voto Critica:</strong> <?php echo $production->criticsRating ?> / 5
+                      </p>
+
+                      <p class="card-text">
+                        <strong>Voto Utenti:</strong> <?php echo $production->usersRating ?> / 5
+                      </p>
+
+                      <p class="card-text">
+                        <strong>Voto Medio:</strong> <?php echo $production->getAverageRating() ?> / 5
+                      </p>
+
+                    </div>
 
                   </div>
 
